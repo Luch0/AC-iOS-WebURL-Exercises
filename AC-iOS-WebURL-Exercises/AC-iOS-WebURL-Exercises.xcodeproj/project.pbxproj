@@ -16,6 +16,8 @@
 		E2F658E31FC3B9DC00BD6C07 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F658E21FC3B9DC00BD6C07 /* MusicViewController.swift */; };
 		E2F658E51FC3BA8B00BD6C07 /* SongsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F658E41FC3BA8B00BD6C07 /* SongsAPIClient.swift */; };
 		E2F658E71FC3BAE600BD6C07 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F658E61FC3BAE600BD6C07 /* NetworkHelper.swift */; };
+		E2F658E91FC3C7EA00BD6C07 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F658E81FC3C7EA00BD6C07 /* WeatherViewController.swift */; };
+		E2F658EB1FC3C80A00BD6C07 /* CitiesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F658EA1FC3C80A00BD6C07 /* CitiesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		E2F658E21FC3B9DC00BD6C07 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E2F658E41FC3BA8B00BD6C07 /* SongsAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsAPIClient.swift; sourceTree = "<group>"; };
 		E2F658E61FC3BAE600BD6C07 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		E2F658E81FC3C7EA00BD6C07 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		E2F658EA1FC3C80A00BD6C07 /* CitiesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F658E21FC3B9DC00BD6C07 /* MusicViewController.swift */,
+				E2F658E81FC3C7EA00BD6C07 /* WeatherViewController.swift */,
 			);
 			path = "VIew Controllers";
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F658E41FC3BA8B00BD6C07 /* SongsAPIClient.swift */,
+				E2F658EA1FC3C80A00BD6C07 /* CitiesAPIClient.swift */,
 				E2F658E61FC3BAE600BD6C07 /* NetworkHelper.swift */,
 			);
 			path = Models;
@@ -290,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F658E71FC3BAE600BD6C07 /* NetworkHelper.swift in Sources */,
+				E2F658E91FC3C7EA00BD6C07 /* WeatherViewController.swift in Sources */,
+				E2F658EB1FC3C80A00BD6C07 /* CitiesAPIClient.swift in Sources */,
 				E2F658E31FC3B9DC00BD6C07 /* MusicViewController.swift in Sources */,
 				E2F658E51FC3BA8B00BD6C07 /* SongsAPIClient.swift in Sources */,
 				E2F658B21FC3B88D00BD6C07 /* AppDelegate.swift in Sources */,

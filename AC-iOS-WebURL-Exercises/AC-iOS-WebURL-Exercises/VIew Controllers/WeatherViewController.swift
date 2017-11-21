@@ -1,5 +1,5 @@
 //
-//  MusicViewController.swift
+//  WeatherViewController.swift
 //  AC-iOS-WebURL-Exercises
 //
 //  Created by Luis Calle on 11/20/17.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var musicTableView: UITableView!
-    var songs: [Song] = []
-    let apiClient = MusicAPIClient(query: "One")
+    @IBOutlet weak var citiesTableView: UITableView!
+    var cities: [City] = []
+    let apiClient = CitiesAPIClient(apiKey: "34acb683b184869612aa37954a30b51c")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.musicTableView.delegate = self
-        self.musicTableView.dataSource = self
+        self.citiesTableView.delegate = self
+        self.citiesTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.apiClient.fetchSongs(completion: { (songs) in
-            self.songs = songs
-            self.musicTableView.reloadData()
+        self.apiClient.fetchCities(completion: { (cities) in
+            self.cities = cities
+            self.citiesTableView.reloadData()
         }, failure: { error in
             let alertController = UIAlertController(title: "Network Error", message: "Something went wrong. Please try closing and reopening the app to refresh.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -34,14 +34,14 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.songs.count
+        return self.cities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Song Cell", for: indexPath)
-        let song = self.songs[indexPath.row]
-        cell.textLabel?.text = song.song_name
-        cell.detailTextLabel?.text = song.display_artist
+        let cell = tableView.dequeueReusableCell(withIdentifier: "City Cell", for: indexPath)
+        let city = self.cities[indexPath.row]
+        cell.textLabel?.text = city.name
+        cell.detailTextLabel?.text = "Current temperature: \(city.main.temp) C"
         return cell
     }
     
